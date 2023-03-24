@@ -1,8 +1,11 @@
 //A0:バッテリー電圧確認用（https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/）
 
+#include "BNO055.h"
+
 void setup() {
   Serial.begin(115200);
   pinMode(A0, INPUT);         // ADC
+  BNO055_setup();
 }
 
 void loop() {
